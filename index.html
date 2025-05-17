@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invest in VH Print's - India's Next Big Creator-Driven Gifting Platform</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Global Styles */
+        :root {
+            --primary-color: #E91E63; /* Pink */
+            --secondary-color: #D32F2F; /* Red */
+            --tertiary-color: #3F51B5; /* Blue */
+            --light-bg-color: #f8f9fa;
+            --dark-text-color: #333;
+            --light-text-color: #fff;
+            --font-family: 'Poppins', sans-serif;
+            --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            --border-radius: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            line-height: 1.6;
+            color: var(--dark-text-color);
+            background-color: #fff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+
+        .section-padding {
+            padding: 60px 0;
+        }
+
+        .bg-light {
+            background-color: var(--light-bg-color);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            color: var(--tertiary-color);
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 28px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: var(--light-text-color);
+            border: 2px solid var(--primary-color);
+        }
+        .btn-primary:hover {
+            background-color: #c2185b;
+            border-color: #c2185b;
+            transform: translateY(-2px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--secondary-color);
+            border: 2px solid var(--secondary-color);
+            margin-left: 15px;
+        }
+        .btn-secondary:hover {
+            background-color: var(--secondary-color);
+            color: var(--light-text-color);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary-nav {
+            background-color: var(--secondary-color);
+            color: var(--light-text-color);
+            padding: 10px 20px;
+        }
+        .btn-primary-nav:hover {
+            background-color: #b71c1c;
+        }
+
+        /* Navigation */
+        .navbar {
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            width: 100%;
+        }
+        .navbar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        .nav-menu {
+            list-style: none;
+            display: flex;
+        }
+        .nav-menu li {
+            margin-left: 25px;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--dark-text-color);
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        .nav-menu a:hover {
+            color: var(--primary-color);
+        }
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            background: none;
+            border: none;
+        }
+        .hamburger span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            margin: 5px 0;
+            background-color: var(--dark-text-color);
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url('https://via.placeholder.com/1920x1080.png/E0E0E0/333333?text=Gifting+Background+Montage') no-repeat center center/cover;
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 0;
+            color: var(--dark-text-color);
+        }
+        .hero-section .container {
+            max-width: 800px;
+        }
+        .company-name {
+            font-size: 4rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .tagline {
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--tertiary-color);
+            margin-bottom: 20px;
+        }
+        .hero-subtext {
+            font-size: 1.1rem;
+            margin-bottom: 30px;
+            color: #444;
+        }
+        .hero-cta .btn {
+            margin: 10px;
+        }
+
+        /* About Section */
+        .about-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+        }
+        .about-text {
+            flex: 1;
+        }
+        .about-text p {
+            margin-bottom: 15px;
+            font-size: 1.05rem;
+        }
+        .about-image {
+            flex-basis: 40%;
+            text-align: center;
+        }
+        .about-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        /* Problem vs. Solution Section */
+        .columns {
+            display: flex;
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .column {
+            flex: 1;
+            padding: 25px;
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+        .column h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--tertiary-color);
+        }
+        .column ul {
+            list-style: none;
+        }
+        .column ul li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            font-size: 1rem;
+        }
+        .column ul li i {
+            margin-right: 10px;
+            font-size: 1.2rem;
+            margin-top: 4px;
+        }
+        .icon-problem { color: var(--secondary-color); }
+        .icon-solution { color: #4CAF50; }
+
+        /* Business Model Section */
+        .model-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .model-card {
+            background-color: var(--light-bg-color);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .model-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--box-shadow);
+        }
+        .model-card .icon-feature {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .model-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--tertiary-color);
+        }
+
+        /* Market Opportunity Section */
+        .market-stats {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .stat-item {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            min-width: 200px;
+        }
+        .stat-number {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        .stat-label {
+            display: block;
+            font-size: 1rem;
+            color: #555;
+        }
+        .icon-market {
+            font-size: 2.5rem;
+            color: var(--tertiary-color);
+            margin-bottom: 10px;
+        }
+        .market-text {
+            font-size: 1.1rem;
+            text-align: center;
+            max-width: 800px;
+            margin: 20px auto 0;
+        }
+
+        /* Funding Request Section */
+        .funding-breakdown {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+        .funding-item {
+            background-color: var(--light-bg-color);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+            text-align: center;
+        }
+        .funding-item i {
+            font-size: 2rem;
+            color: var(--tertiary-color);
+            margin-bottom: 10px;
+        }
+        .funding-item h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        .funding-item p {
+            font-size: 0.95rem;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .funding-amount {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        .funding-total {
+            text-align: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-top: 40px;
+            padding: 20px;
+            background-color: var(--tertiary-color);
+            color: var(--light-text-color);
+            border-radius: var(--border-radius);
+        }
+
+        /* Investor CTA Section */
+        .bg-cta {
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+            color: var(--light-text-color);
+        }
+        .section-title-light {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--light-text-color);
+        }
+        .section-title-light::after {
+            background-color: var(--light-text-color);
+        }
+        .cta-text {
+            font-size: 1.15rem;
+            margin-bottom: 30px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-buttons .btn {
+            margin: 10px;
+        }
+        .btn-light {
+            background-color: var(--light-text-color);
+            color: var(--primary-color);
+            border: 2px solid var(--light-text-color);
+        }
+        .btn-light:hover {
+            background-color: rgba(255,255,255,0.85);
+            border-color: rgba(255,255,255,0.85);
+        }
+        .btn-outline-light {
+            background-color: transparent;
+            color: var(--light-text-color);
+            border: 2px solid var(--light-text-color);
+        }
+        .btn-outline-light:hover {
+            background-color: var(--light-text-color);
+            color: var(--secondary-color);
+        }
+
+        /* Contact Section */
+        .contact-methods {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .contact-item {
+            text-align: center;
+            padding: 25px;
+            background-color: var(--light-bg-color);
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        }
+        .icon-contact {
+            font-size: 2.5rem;
+            color: var(--tertiary-color);
+            margin-bottom: 15px;
+        }
+        .contact-item h4 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+        .contact-item p a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .contact-item p a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .footer-section {
+            background-color: var(--dark-text-color);
+            color: #ccc;
+            text-align: center;
+            padding: 25px 0;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        .animate-on-scroll {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .animate-on-scroll.is-visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .section-title { font-size: 2.2rem; }
+            .company-name { font-size: 3rem; }
+            .tagline { font-size: 1.6rem; }
+            .about-content { flex-direction: column; }
+            .about-image { margin-top: 30px; flex-basis: auto; }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                background-color: #fff;
+                box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+                padding-bottom: 10px;
+            }
+            .nav-menu.active { display: flex; }
+            .nav-menu li { margin: 10px 0; text-align: center; }
+            .nav-invest-button { display: none; }
+
+            .hamburger { display: block; }
+            .hamburger.active span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+            .hamburger.active span:nth-child(2) { opacity: 0; }
+            .hamburger.active span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+            .columns { flex-direction: column; }
+            .hero-section { min-height: 70vh; }
+            .company-name { font-size: 2.5rem; }
+            .tagline { font-size: 1.4rem; }
+            .hero-cta .btn { display: block; margin: 10px auto; width: fit-content; }
+            .btn-secondary { margin-left: 0; }
+        }
+
+        @media (max-width: 576px) {
+            .section-title { font-size: 1.8rem; }
+            .funding-breakdown, .contact-methods, .model-breakdown {
+                grid-template-columns: 1fr;
+            }
+            .stat-item { min-width: 100%; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="nav-logo">VH Print's</a>
+            <ul class="nav-menu">
+                <li><a href="#about">About</a></li>
+                <li><a href="#problem-solution">Problem/Solution</a></li>
+                <li><a href="#business-model">Business Model</a></li>
+                <li><a href="#market">Market</a></li>
+                <li><a href="#funding">Funding</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-invest-button">
+                <a href="#invest" class="btn btn-primary-nav">Invest Now</a>
+            </div>
+            <button class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="company-name animate-on-scroll">VH Print's</h1>
+            <p class="tagline animate-on-scroll">India's Next Big Creator-Driven Gifting Platform</p>
+            <p class="hero-subtext animate-on-scroll">Empowering creativity, revolutionizing personalized gifting across India. Invest in the future.</p>
+            <div class="hero-cta animate-on-scroll">
+                <a href="#invest" class="btn btn-primary">Join as an Investor</a>
+                <a href="#contact" class="btn btn-secondary">Connect With Us</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section section-padding">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title">About VH Print's</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>VH Print's is poised to become India's leading creator-driven gifting platform. We bridge the gap between talented designers and consumers seeking unique, personalized gifts. Our model empowers independent creators by providing them a low-barrier entry (₹49 joining fee) to showcase their designs on a variety of products like T-shirts, mugs, pens, custom notebooks, and more.</p>
+                    <p><strong>Our Vision:</strong> To cultivate a vibrant ecosystem where creativity flourishes, designers earn consistently, and consumers discover an unparalleled range of personalized gifting options. We handle the complexities – printing, high-quality production, nationwide delivery, and dedicated customer service – allowing creators to focus solely on their art.</p>
+                </div>
+                <div class="about-image">
+                <img src="https://i.ibb.co/5xgvm5Bg/image.png" alt="VH Print's Platform Concept">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem vs. Solution Section -->
+    <section id="problem-solution" class="problem-solution-section section-padding bg-light">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title">The Opportunity: Bridging the Gap</h2>
+            <div class="columns">
+                <div class="column problem">
+                    <h3>The Problem</h3>
+                    <ul>
+                        <li><i class="fas fa-times-circle icon-problem"></i> <strong>For Creators:</strong> High entry barriers, significant upfront costs for equipment & inventory, marketing challenges, and logistical nightmares (printing, shipping).</li>
+                        <li><i class="fas fa-times-circle icon-problem"></i> <strong>For Consumers:</strong> Limited availability of truly unique, personalized gifts. Mass-produced items lack a personal touch.</li>
+                        <li><i class="fas fa-times-circle icon-problem"></i> <strong>Market Gap:</strong> Difficulty for independent Indian designers to monetize their talent effectively at scale.</li>
+                    </ul>
+                </div>
+                <div class="column solution">
+                    <h3>Our Solution: VH Print's</h3>
+                    <ul>
+                        <li><i class="fas fa-check-circle icon-solution"></i> <strong>Empower Creators:</strong> A nominal ₹49 joining fee gives access to our platform. Upload designs, set your preferred items, and earn.</li>
+                        <li><i class="fas fa-check-circle icon-solution"></i> <strong>Hassle-Free Operations:</strong> We manage everything from printing on demand, quality control, secure packaging, to nationwide delivery and customer support.</li>
+                        <li><i class="fas fa-check-circle icon-solution"></i> <strong>Unique Gifting:</strong> Consumers get access to a vast, ever-growing catalog of unique designs from talented Indian artists, perfect for any occasion.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Business Model Breakdown Section -->
+    <section id="business-model" class="business-model-section section-padding">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title">Our Sustainable Business Model</h2>
+            <div class="model-breakdown">
+                <div class="model-card">
+                    <i class="fas fa-users icon-feature"></i>
+                    <h4>Creator Onboarding</h4>
+                    <p>Designers join for a one-time fee of ₹49, gaining immediate access to upload and monetize their designs.</p>
+                </div>
+                <div class="model-card">
+                    <i class="fas fa-percent icon-feature"></i>
+                    <h4>Commission Structure</h4>
+                    <p>Creators earn attractive commissions ranging from <strong>5.25% to 10.25%</strong> on the selling price of each item featuring their design.</p>
+                </div>
+                <div class="model-card">
+                    <i class="fas fa-tshirt icon-feature"></i>
+                    <h4>Example: T-Shirt Sale</h4>
+                    <p>A T-shirt sold for ₹469. If the designer's commission rate for this product/tier is set, for example, at a point that earns them <strong>₹10.25</strong>, this demonstrates a tangible earning per sale. Higher tiers yield more.</p>
+                </div>
+                <div class="model-card">
+                    <i class="fas fa-cogs icon-feature"></i>
+                    <h4>VH Print's Role</h4>
+                    <p>We manage the e-commerce platform, product sourcing, printing, quality checks, packaging, pan-India delivery, and all customer service.</p>
+                </div>
+            </div>
+            <p class="text-center" style="margin-top: 20px;">This symbiotic model ensures profitability for VH Print's while providing a lucrative platform for designers and unique products for customers.</p>
+        </div>
+    </section>
+
+    <!-- Market Opportunity Section -->
+    <section id="market" class="market-opportunity-section section-padding bg-light">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title">Tapping into a Vast Market</h2>
+            <div class="market-stats">
+                <div class="stat-item">
+                    <span class="stat-number">₹35,000 Cr</span>
+                    <span class="stat-label">Indian Gifting Market Size</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-chart-line icon-market"></i>
+                    <span class="stat-label">Significant Growth Potential</span>
+                </div>
+                <div class="stat-item">
+                    <i class="fas fa-gift icon-market"></i>
+                    <span class="stat-label">Rising Demand for Personalization</span>
+                </div>
+            </div>
+            <p class="market-text">The Indian gifting market is enormous and continuously expanding. There's a clear shift towards personalized and unique gifts, moving away from generic options. VH Print's is perfectly positioned to capture a significant share of this market by empowering local talent and offering unparalleled customization.</p>
+        </div>
+    </section>
+
+    <!-- Funding Request Section -->
+    <section id="funding" class="funding-request-section section-padding">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title">Funding Request: Fueling Our Growth</h2>
+            <p class="section-subtitle">We are seeking an initial seed funding of <strong>₹86,100</strong> to launch and scale operations.</p>
+            <div class="funding-breakdown">
+                <div class="funding-item">
+                    <h4><i class="fas fa-print"></i> Machinery & Equipment</h4>
+                    <p>High-quality printing & production tools.</p>
+                    <span class="funding-amount">₹32,000</span>
+                </div>
+                <div class="funding-item">
+                    <h4><i class="fas fa-laptop-code"></i> Website & Platform Dev.</h4>
+                    <p>Robust e-commerce site with creator dashboards.</p>
+                    <span class="funding-amount">₹44,000</span>
+                </div>
+                <div class="funding-item">
+                    <h4><i class="fas fa-bullhorn"></i> Initial Marketing & Ads</h4>
+                    <p>Targeted campaigns to attract designers & customers.</p>
+                    <span class="funding-amount">₹10,000</span>
+                </div>
+                <div class="funding-item">
+                    <h4><i class="fas fa-shipping-fast"></i> Delivery Setup & Logistics</h4>
+                    <p>Initial partnerships and system integration.</p>
+                    <span class="funding-amount">₹100</span>
+                </div>
+            </div>
+            <div class="funding-total">
+                <strong>Total Seed Funding Required: ₹86,100</strong>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investor Call-to-Action Section -->
+    <section id="invest" class="investor-cta-section section-padding bg-cta">
+        <div class="container text-center animate-on-scroll">
+            <h2 class="section-title-light">Partner with VH Print's</h2>
+            <p class="cta-text">Join us in building India's premier creator-driven gifting platform. Your investment will directly contribute to empowering artists and delighting customers nationwide.</p>
+            <div class="cta-buttons">
+                <a href="mailto:ravigarimella9@gmail.com?subject=Investment%20Inquiry%20-%20VH%20Print's" class="btn btn-light">Join as an Investor</a>
+                <a href="https://wa.me/919667157649?text=Hi,%20I'm%20interested%20in%20investing%20or%20connecting%20regarding%20VH%20Print's." target="_blank" class="btn btn-outline-light">Invest or Connect</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container animate-on-scroll">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">We're excited to discuss this opportunity further. Reach out to us:</p>
+            <div class="contact-methods">
+                <div class="contact-item">
+                    <i class="fas fa-envelope icon-contact"></i>
+                    <h4>Email</h4>
+                    <p><a href="mailto:ravigarimella9@gmail.com">ravigarimella9@gmail.com</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-whatsapp icon-contact"></i>
+                    <h4>WhatsApp</h4>
+                    <p><a href="https://wa.me/919667157649" target="_blank">+91 9667157649</a></p>
+                </div>
+                <div class="contact-item">
+                    <i class="fab fa-instagram icon-contact"></i>
+                    <h4>Instagram</h4>
+                    <p><a href="https://instagram.com/modeluxefashiion" target="_blank">@modeluxefashiion</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-section">
+        <div class="container">
+            <p>© 2025 VH Print's. All Rights Reserved. | Pioneering Creative Gifting in India.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Smooth scroll for navigation links
+            const navLinks = document.querySelectorAll('.nav-menu a, .hero-cta a[href^="#"], .nav-invest-button a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href && href.startsWith('#') && href.length > 1) {
+                        e.preventDefault();
+                        const targetId = href.substring(1);
+                        const targetElement = document.getElementById(targetId);
+                        if (targetElement) {
+                            const offsetTop = targetElement.offsetTop - 70;
+                            window.scrollTo({
+                                top: offsetTop,
+                                behavior: 'smooth'
+                            });
+
+                            // Close mobile menu if open
+                            if (navMenu.classList.contains('active')) {
+                                navMenu.classList.remove('active');
+                                hamburger.classList.remove('active');
+                            }
+                        }
+                    }
+                });
+            });
+
+            // Mobile navigation toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', () => {
+                    hamburger.classList.toggle('active');
+                    navMenu.classList.toggle('active');
+                });
+            }
+
+            // Scroll Animations
+            const animatedElements = document.querySelectorAll('.animate-on-scroll');
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+
+            animatedElements.forEach(el => {
+                observer.observe(el);
+            });
+        });
+    </script>
+</body>
+</html>
